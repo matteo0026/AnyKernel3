@@ -41,6 +41,10 @@ dump_boot;
 
 # begin ramdisk changes
 
+# Disable dm-verity on /system (due to changed modules)
+patch_fstab fstab.qcom /system ext4 options ",errors=panic" ""
+patch_fstab fstab.qcom /system ext4 flags ",verify" ""
+
 # end ramdisk changes
 
 write_boot;

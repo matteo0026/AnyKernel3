@@ -4,14 +4,14 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=
+kernel.string=HardcoreKernel for Aquaris X / X Pro by @scafroglia93 and @matteo0026
 do.devicecheck=1
 do.modules=1
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=
-device.name2=
+device.name1=bardock
+device.name2=bardock-pro
 device.name3=
 device.name4=
 device.name5=
@@ -20,7 +20,7 @@ supported.patchlevels=
 '; } # end properties
 
 # shell variables
-block=;
+block=/dev/block/bootdevice/by-name/boot;
 is_slot_device=0;
 ramdisk_compression=auto;
 
